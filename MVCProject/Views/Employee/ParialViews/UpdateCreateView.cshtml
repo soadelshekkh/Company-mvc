@@ -1,0 +1,61 @@
+﻿@model EmployeeViewModel
+@{
+    var AllDepartments = new SelectList(ViewBag.department, "Dnum", "DName");
+}
+
+
+<div class="form-group">
+    <label asp-for="Name" class="col-form-label">Employee Name</label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Age" class="col-form-label">Employee Age</label>
+    <input asp-for="Age" class="form-control" />
+    <span asp-validation-for="Age"></span>
+</div>
+<div class="form-group">
+    <label asp-for="salary" class="col-form-label">Employee salary</label>
+    <input asp-for="salary" class="form-control" />
+    <span asp-validation-for="salary"></span>
+</div>
+<div class="form-group">
+
+    <label asp-for="Email" class="col-form-label">Employee Email</label>
+    <input asp-for="Email" class="form-control" />
+    <span asp-validation-for="Email"></span>
+</div>
+<div class="form-group">
+
+    <label asp-for="phoneNumber" class="col-form-label">Employee phone Number</label>
+    <input asp-for="phoneNumber" class="form-control" />
+    <span asp-validation-for="phoneNumber"></span>
+</div>
+<div class="form-group">
+
+    <label asp-for="HirringDate" class="col-form-label">Employee Hirring Date</label>
+    <input asp-for="HirringDate" class="form-control" />
+    <span asp-validation-for="HirringDate"></span>
+</div>
+<div class="form-group">
+
+    <label asp-for="CreationDate" class="col-form-label">Employee Creation Date</label>
+    <input asp-for="CreationDate" class="form-control" />
+    <span asp-validation-for="CreationDate"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Address" class="col-form-label">Employee Address</label>
+    <input asp-for="Address" class="form-control"  />
+    <span asp-validation-for="Address"></span>
+</div>
+<div class="form-group">
+    //Image ImageName
+    <label asp-for="DepartmentId" class="col-form-label"></label>
+    <select asp-for="DepartmentId" asp-items="AllDepartments" class="form-control">
+        <option>--select department</option>
+    </select>
+</div>
+<div class="form-group">
+    <label asp-for="Image" class="col-form-label"></label>
+    <input asp-for="Image" class="form-control" />
+</div>

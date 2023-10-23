@@ -1,0 +1,13 @@
+﻿@model UserRegister
+
+
+<div class="form-group">
+    <label asp-for="Email" class="col-form-label">User Email</label>
+    <input asp-for="Email" class="form-control" />
+    <span asp-validation-for="Email"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PhoneNumber" class="col-form-label">Phone Number</label>
+    <input asp-for="PhoneNumber" class="form-control" />
+    <span asp-validation-for="PhoneNumber"></span>
+</div>

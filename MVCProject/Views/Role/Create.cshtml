@@ -1,0 +1,18 @@
+﻿@model IdentityRole
+@{
+    ViewData["Title"] = "Create";
+}
+<h1>Create User</h1>
+<form asp-action="Create" enctype="multipart/form-data">
+ 
+   
+    <partial name="ParialViews/UpdateCreateView" />
+    <input value="Submit" type="submit" class="btn btn-primary" />
+
+    <a class="btn btn-light" asp-action="Index"> Back TO Roles</a>
+</form>
+
+@section ValidationScript{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

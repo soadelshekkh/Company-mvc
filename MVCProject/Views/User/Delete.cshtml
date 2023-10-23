@@ -1,0 +1,13 @@
+﻿@model UserRegister
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<form asp-action="Delete">
+    <partial name="ParialViews/DeleteDetailsView" />
+    <input class="btn btn-danger" type="submit" value="Delete" />
+    <a asp-action="Index" class="btn btn-primary">Cancel </a>
+</form>
+

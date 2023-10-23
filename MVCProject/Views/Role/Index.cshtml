@@ -1,0 +1,42 @@
+﻿@model IEnumerable<IdentityRole>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<a class="btn btn-info" asp-controller="Role" asp-action="Create">Create New Role</a>
+<br />
+<br />
+<form asp-action="Index">
+    <div class="row  justify-content-end  ">
+    <input class="form-control col-8 m-2" name="Name" />
+    <input type="submit" class="btn btn-primary col-2 m-2" value="Search"/>
+    </div>
+</form>
+@if(Model.Count() > 0){
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Details</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+        <tbody>
+        @foreach (var Role in Model)
+        {
+            <tr>
+                    <td>@Html.DisplayFor(M => Role.Id)</td>
+                    <td>@Html.DisplayFor(M => Role.Name)</td>
+                <partial name="ButtonsPartialViews" model="@Role.Id">
+            </tr>
+        }
+    </tbody>
+</table>
+}else{
+    <div class="btn btn-light">No Roles Exist</div>
+}
+
+

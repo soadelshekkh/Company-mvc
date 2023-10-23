@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "checkYourInbox";
+    Layout = "~/Views/Shared/AccountLayout.cshtml";
+}
+
+<h1>Check Your Inbox</h1>
+<div class="main-agileinfo">
+	<div class="agileits-top">
+		<div asp-validation-summary="All"></div>
+		
+		<p>Resend Email <a asp-action="ForgetPassword"> Resend Email!</a></p>
+	</div>
+</div>
+@section ValidationScript{
+	<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+

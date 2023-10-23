@@ -1,0 +1,14 @@
+﻿@model Department
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Update</h1>
+
+<form asp-action="Update">
+    <input asp-for="Dnum" hidden/>
+    <partial name="PartialViews/UpdateCreateView" /> 
+    <input value="Submit" type="submit" class="btn btn-primary" />
+    <a class="btn btn-light" asp-action="Index"> Back TO Department</a>
+</form>
+@*model="@Model"*@
